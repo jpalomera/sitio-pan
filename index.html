@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Asistente Panaderia La Miga Clara</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="business-panel" aria-label="Informacion del negocio">
+        <div>
+          <p class="eyebrow">Proyecto 1</p>
+          <h1>Panaderia La Miga Clara</h1>
+          <p class="lead">
+            Asistente gratuito para responder preguntas frecuentes de clientes usando una base de conocimiento local.
+          </p>
+        </div>
+
+        <div class="fact-grid" aria-label="Datos rapidos">
+          <article>
+            <span>Horario</span>
+            <strong>Lun a sab, 07:30 a 20:00</strong>
+          </article>
+          <article>
+            <span>Ubicacion</span>
+            <strong>Av. Italia 1420, Providencia</strong>
+          </article>
+          <article>
+            <span>Delivery</span>
+            <strong>Desde $2.500</strong>
+          </article>
+          <article>
+            <span>Reserva</span>
+            <strong>Hasta 24 horas antes</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="chat-panel" aria-label="Chat del asistente">
+        <header class="chat-header">
+          <div>
+            <p>Asistente de clientes</p>
+            <h2>Hola, soy Clara</h2>
+          </div>
+          <span class="status">Online</span>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <div class="suggestions" aria-label="Preguntas sugeridas">
+          <button type="button" data-question="Cual es el horario?">Horario</button>
+          <button type="button" data-question="Cuanto cuesta la marraqueta?">Precios</button>
+          <button type="button" data-question="Hacen delivery?">Delivery</button>
+          <button type="button" data-question="Tienen opciones veganas?">Vegano</button>
+        </div>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="question">Pregunta para el asistente</label>
+          <input id="question" name="question" type="text" autocomplete="off" placeholder="Escribe una pregunta de cliente..." required>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
